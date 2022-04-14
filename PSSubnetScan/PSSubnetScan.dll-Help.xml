@@ -1,0 +1,1140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <!-- Cmdlet: Get-PSSubnet -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-PSSubnet</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>PSSubnet</command:noun>
+      <maml:description>
+        <maml:para>Get subnet addresses.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use Get-PSSubnet cmdlet to get all ip addresses in subnet.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnet</maml:name>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: IPList -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+        <maml:name>IPList</maml:name>
+        <maml:description>
+          <maml:para>Start IP address</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Start IP address</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code> Get all objects of ip addresses in subnet 10.10.10.0/30.
+PS&gt; PS C:\Users\mg&gt; Get-PSSubnet -IPList 10.10.10.0/30
+
+IPList
+------
+{10.10.10.0, 10.10.10.1, 10.10.10.2, 10.10.10.3}</dev:code>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Author Blog</maml:linkText>
+        <maml:uri>https://commandlinegeeks.wordpress.com/</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Get-PSSubnetInfo -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-PSSubnetInfo</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>PSSubnetInfo</command:noun>
+      <maml:description>
+        <maml:para>Get subnet information.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use Get-PSSubnetInfo cmdlet to get basic subnet information: network address, broadcast address or netmask info.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnetInfo</maml:name>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: IPList -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+        <maml:name>IPList</maml:name>
+        <maml:description>
+          <maml:para>Start IP address</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Start IP address</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code> Get information about subnet 10.0.0.0/24.
+PS&gt; Get-PSSubnetInfo -IPList 10.0.0.0/24
+
+IP               : 10.0.0.0
+BitMask          : 24
+NetMask          : 255.255.255.0
+CIDR             : 10.0.0.0/24
+NetworkAddress   : 10.0.0.0
+BroadcastAddress : 10.0.0.255</dev:code>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Author Blog</maml:linkText>
+        <maml:uri>https://commandlinegeeks.wordpress.com/</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <!-- Cmdlet: Get-PSSubnetScan -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-PSSubnetScan</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>PSSubnetScan</command:noun>
+      <maml:description>
+        <maml:para>Get scan of active ports.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use Get-PSSubnet cmdlet to get active ports on target in subnet.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: Port -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnetScan</maml:name>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: PortList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+          <maml:name>PortList</maml:name>
+          <maml:description>
+            <maml:para>Ports to scan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: AsHashtable -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AsHashtable</maml:name>
+          <maml:description>
+            <maml:para>Output as hastable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: CommonPorts -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>CommonPorts</maml:name>
+          <maml:description>
+            <maml:para>Use defoult ports for common services.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: ConnectTimeout -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ConnectTimeout</maml:name>
+          <maml:description>
+            <maml:para>TCP connect timeout. Default is 5s.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TimeSpan</command:parameterValue>
+          <dev:type>
+            <maml:name>System.TimeSpan</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00:00:05</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ICMPTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ICMPTest</maml:name>
+          <maml:description>
+            <maml:para>Test ICMP</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: Protocol -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>Protocol</maml:name>
+          <maml:description>
+            <maml:para>Protocol type for all scanned ports. Default is Tcp.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: RevDNSTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>RevDNSTest</maml:name>
+          <maml:description>
+            <maml:para>Test Reverse DNS</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: SslProtocol -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>SslProtocol</maml:name>
+          <maml:description>
+            <maml:para>Test Ssl protocols. Default use all available.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>*</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: SSLTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>SSLTest</maml:name>
+          <maml:description>
+            <maml:para>Test SSL</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: TaskLimit -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>TaskLimit</maml:name>
+          <maml:description>
+            <maml:para>Concurrent async tasks limit</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>256</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: TlsCipherSuite -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>TlsCipherSuite</maml:name>
+          <maml:description>
+            <maml:para>Test Tls Cipher Suite. Supported on Linux system with OpenSSL 1.1.1 or higher or a macOS.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: WMITest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WMITest</maml:name>
+          <maml:description>
+            <maml:para>Test WMI</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WSManTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WSManTest</maml:name>
+          <maml:description>
+            <maml:para>Test WSMan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <!-- Parameter set: Ping -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnetScan</maml:name>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: AsHashtable -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AsHashtable</maml:name>
+          <maml:description>
+            <maml:para>Output as hastable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ConnectTimeout -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ConnectTimeout</maml:name>
+          <maml:description>
+            <maml:para>TCP connect timeout. Default is 5s.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TimeSpan</command:parameterValue>
+          <dev:type>
+            <maml:name>System.TimeSpan</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00:00:05</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ICMPTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ICMPTest</maml:name>
+          <maml:description>
+            <maml:para>Test ICMP</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PortList -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PortList</maml:name>
+          <maml:description>
+            <maml:para>Ports to scan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: RevDNSTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>RevDNSTest</maml:name>
+          <maml:description>
+            <maml:para>Test Reverse DNS</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: TaskLimit -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>TaskLimit</maml:name>
+          <maml:description>
+            <maml:para>Concurrent async tasks limit</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>256</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WMITest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WMITest</maml:name>
+          <maml:description>
+            <maml:para>Test WMI</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WSManTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WSManTest</maml:name>
+          <maml:description>
+            <maml:para>Test WSMan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <!-- Parameter set: RevDNS -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnetScan</maml:name>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: AsHashtable -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AsHashtable</maml:name>
+          <maml:description>
+            <maml:para>Output as hastable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ConnectTimeout -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ConnectTimeout</maml:name>
+          <maml:description>
+            <maml:para>TCP connect timeout. Default is 5s.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TimeSpan</command:parameterValue>
+          <dev:type>
+            <maml:name>System.TimeSpan</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00:00:05</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ICMPTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ICMPTest</maml:name>
+          <maml:description>
+            <maml:para>Test ICMP</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PortList -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PortList</maml:name>
+          <maml:description>
+            <maml:para>Ports to scan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: RevDNSTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>RevDNSTest</maml:name>
+          <maml:description>
+            <maml:para>Test Reverse DNS</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: TaskLimit -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>TaskLimit</maml:name>
+          <maml:description>
+            <maml:para>Concurrent async tasks limit</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>256</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WMITest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WMITest</maml:name>
+          <maml:description>
+            <maml:para>Test WMI</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WSManTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WSManTest</maml:name>
+          <maml:description>
+            <maml:para>Test WSMan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <!-- Parameter set: WMI -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnetScan</maml:name>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: WMITest -->
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WMITest</maml:name>
+          <maml:description>
+            <maml:para>Test WMI</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: AsHashtable -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AsHashtable</maml:name>
+          <maml:description>
+            <maml:para>Output as hastable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ConnectTimeout -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ConnectTimeout</maml:name>
+          <maml:description>
+            <maml:para>TCP connect timeout. Default is 5s.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TimeSpan</command:parameterValue>
+          <dev:type>
+            <maml:name>System.TimeSpan</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00:00:05</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ICMPTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ICMPTest</maml:name>
+          <maml:description>
+            <maml:para>Test ICMP</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PortList -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PortList</maml:name>
+          <maml:description>
+            <maml:para>Ports to scan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: RevDNSTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>RevDNSTest</maml:name>
+          <maml:description>
+            <maml:para>Test Reverse DNS</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: TaskLimit -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>TaskLimit</maml:name>
+          <maml:description>
+            <maml:para>Concurrent async tasks limit</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>256</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WSManTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WSManTest</maml:name>
+          <maml:description>
+            <maml:para>Test WSMan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <!-- Parameter set: WSMan -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnetScan</maml:name>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: AsHashtable -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AsHashtable</maml:name>
+          <maml:description>
+            <maml:para>Output as hastable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ConnectTimeout -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ConnectTimeout</maml:name>
+          <maml:description>
+            <maml:para>TCP connect timeout. Default is 5s.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TimeSpan</command:parameterValue>
+          <dev:type>
+            <maml:name>System.TimeSpan</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00:00:05</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ICMPTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ICMPTest</maml:name>
+          <maml:description>
+            <maml:para>Test ICMP</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: PortList -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>PortList</maml:name>
+          <maml:description>
+            <maml:para>Ports to scan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: RevDNSTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>RevDNSTest</maml:name>
+          <maml:description>
+            <maml:para>Test Reverse DNS</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: TaskLimit -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>TaskLimit</maml:name>
+          <maml:description>
+            <maml:para>Concurrent async tasks limit</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>256</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WMITest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WMITest</maml:name>
+          <maml:description>
+            <maml:para>Test WMI</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: WSManTest -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>WSManTest</maml:name>
+          <maml:description>
+            <maml:para>Test WSMan</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <!-- Parameter set: CommonPorts -->
+      <command:syntaxItem>
+        <maml:name>Get-PSSubnetScan</maml:name>
+        <!-- Parameter: CommonPorts -->
+        <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+          <maml:name>CommonPorts</maml:name>
+          <maml:description>
+            <maml:para>Use defoult ports for common services.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: IPList -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+          <maml:name>IPList</maml:name>
+          <maml:description>
+            <maml:para>Start IP address</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: AsHashtable -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>AsHashtable</maml:name>
+          <maml:description>
+            <maml:para>Output as hastable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: ConnectTimeout -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>ConnectTimeout</maml:name>
+          <maml:description>
+            <maml:para>TCP connect timeout. Default is 5s.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">TimeSpan</command:parameterValue>
+          <dev:type>
+            <maml:name>System.TimeSpan</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>00:00:05</dev:defaultValue>
+        </command:parameter>
+        <!-- Parameter: TaskLimit -->
+        <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+          <maml:name>TaskLimit</maml:name>
+          <maml:description>
+            <maml:para>Concurrent async tasks limit</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>256</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: IPList -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="named">
+        <maml:name>IPList</maml:name>
+        <maml:description>
+          <maml:para>Start IP address</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: PortList -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByPropertyName)" position="named">
+        <maml:name>PortList</maml:name>
+        <maml:description>
+          <maml:para>Ports to scan</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Protocol -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>Protocol</maml:name>
+        <maml:description>
+          <maml:para>Protocol type for all scanned ports. Default is Tcp.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: CommonPorts -->
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+        <maml:name>CommonPorts</maml:name>
+        <maml:description>
+          <maml:para>Use defoult ports for common services.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: SSLTest -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>SSLTest</maml:name>
+        <maml:description>
+          <maml:para>Test SSL</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: TlsCipherSuite -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>TlsCipherSuite</maml:name>
+        <maml:description>
+          <maml:para>Test Tls Cipher Suite. Supported on Linux system with OpenSSL 1.1.1 or higher or a macOS.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: SslProtocol -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>SslProtocol</maml:name>
+        <maml:description>
+          <maml:para>Test Ssl protocols. Default use all available.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>*</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: ICMPTest -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>ICMPTest</maml:name>
+        <maml:description>
+          <maml:para>Test ICMP</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: RevDNSTest -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>RevDNSTest</maml:name>
+        <maml:description>
+          <maml:para>Test Reverse DNS</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: WMITest -->
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WMITest</maml:name>
+        <maml:description>
+          <maml:para>Test WMI</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: WSManTest -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>WSManTest</maml:name>
+        <maml:description>
+          <maml:para>Test WSMan</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: ConnectTimeout -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>ConnectTimeout</maml:name>
+        <maml:description>
+          <maml:para>TCP connect timeout. Default is 5s.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">TimeSpan</command:parameterValue>
+        <dev:type>
+          <maml:name>System.TimeSpan</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>00:00:05</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: TaskLimit -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>TaskLimit</maml:name>
+        <maml:description>
+          <maml:para>Concurrent async tasks limit</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">int</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>256</dev:defaultValue>
+      </command:parameter>
+      <!-- Parameter: AsHashtable -->
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="named">
+        <maml:name>AsHashtable</maml:name>
+        <maml:description>
+          <maml:para>Output as hastable</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Start IP address</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Ports to scan</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>Get scan of machine 10.10.1.3.
+PS&gt; $Scan = Get-PSSubnetScan -IPList 10.10.1.3 -PortList 443,3389 -SSLTest -ICMPTest -RevDNSTest -WSManTest -WMITest
+PS&gt; $Scan
+IPAddress Ports ICMP  RevDNS WMI   WSMan
+---------       -----                   ----  ------                                                ---   -----
+10.10.1.3       3389                    True dc01.psmvp.org                                        False True
+
+PS&gt; $Scan[0].Ports
+Port Active SSLCertificateThumbprint                 SSLCertificateSubject SSLProtocols
+----  ------ ------------------------                 --------------------- ------------
+443   False
+3389  True D63B270474F61D2EBE621605E302A29892BF7C4B CN= dc01.psmvp.org,... Tls, Tls11, Tls12
+
+PS&gt; $Scan[0].WSMan
+Active RemotePSVersion WSManUriAuth
+------ --------------- ------------
+True   5.1.14409.1018  Default, Negotiate, NegotiateWithImplicitCredential, Kerberos</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>Get scan machines in subnet 10.10.1.0/29.
+PS&gt; $Scan = Get-PSSubnetScan -IPList 10.10.1.0/29 -PortList 3389 -ICMPTest
+PS&gt; $Scan
+IPAddress Ports ICMP  RevDNS WMI   WSMan
+---------       -----                           ----  ------                         ---   -----
+10.10.1.0                                       False
+10.10.1.1                                       False
+10.10.1.2       3389                            True
+10.10.1.3       3389                            False
+10.10.1.4       3389                            True
+10.10.1.5                                       False
+10.10.1.6       3389                            True
+10.10.1.7                                       False</dev:code>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Author Blog</maml:linkText>
+        <maml:uri>https://commandlinegeeks.wordpress.com/</maml:uri>
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>
